@@ -14,16 +14,11 @@
 </html>
 
 <?php
-    if (isset($_GET['Yuta'])){
-    $massiv_slov = explode (' ', $_GET['Yuta']);
-    upFunc ($massiv_slov);
-    echo implode (' ',$massiv_slov);
-    }
-    function upFunc (&$massiv_slov){
-        for($i=0; $i < count($massiv_slov); $i++){
-            if (($i % 2)>0){
-               $massiv_slov [$i]=strtoupper($massiv_slov[$i]);
-            }
-        }
-    }
-    
+$XVI="Иван Васильевич";
+$XVIII="Пётр Алексеевич";
+$XIX="Николай Павлович";
+if (isset($_GET['Yuta'])){
+    $vek = $_GET['Yuta'];
+    echo 'в '. $vek .' веке царствовал '. $$vek;
+}
+?>
